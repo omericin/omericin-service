@@ -1,7 +1,7 @@
 version: '3.1'
 services:
   spring:
-    image: serv:v2
+    image: omericin/pu-service:v1
     volumes:
       - spring:/var/lib/spring
     ports:
@@ -10,31 +10,28 @@ services:
       - SPRING_DATA_MONGODB_HOST=mongoservice
       - SPRING_DATA_MONGODB_PORT=27017
       - SPRING_DATA_MONGODB_DATABASE=phoneselling
-  bridgev:
-    image: bridge:v4
-    volumes:
-      - bridgev:/var/lib/bridgev
-    ports:
-      - '8181:8181'
   mongoservice:
     image: mongo
     volumes:
       - mongo_data:/data/db
       - mongo_config:/data/configdb
-    ports:
-      - '27017:27017'
+    expose:
+      - '27017'
     environment:
       - MONGO_INITDB_DATABASE=phoneselling
     restart: always
   app:
-    image: appv:v1
+    image: omericin/pu-app:v2
     volumes:
       - app:/var/lib/app
     ports:
-      - "3000:3000"
+      - "80:3000"
 volumes:
-  spring: {}
-  mongo_data: {}
-  mongo_config: {}
-  app: {}
-  bridgev: {}
+  spring:
+    external: true
+  mongo_data:
+    external: true
+  mongo_config:
+    external: true
+  app:
+    external: true

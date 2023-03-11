@@ -18,7 +18,6 @@ import com.web.phone.dto.StorageRequestDTO;
 import com.web.phone.model.Storage;
 import com.web.phone.service.StorageService;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/storage")
 public class StorageController {
@@ -26,19 +25,19 @@ public class StorageController {
 	@Autowired
 	private StorageService storageService;
 	
-	@CrossOrigin(origins = "http://82.180.155.55:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @PostMapping("/")
     public ResponseEntity<Storage> create(@RequestBody Storage storage) {
 		return storageService.createStorage(storage);
     }
 
-	@CrossOrigin(origins = "http://82.180.155.55:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @GetMapping("/")
     public ResponseEntity<List<Storage>> list() {
         return storageService.getAll();
     }
 	
-	@CrossOrigin(origins = "http://82.180.155.55:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 	@DeleteMapping("/{id}")
 	public int delete(@PathVariable String id) {
 		try {
@@ -49,7 +48,7 @@ public class StorageController {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://82.180.155.55:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
 	@PutMapping("/")
 	public Storage update(@RequestBody StorageRequestDTO storage) {
 		return storageService.updateStorage(storage);

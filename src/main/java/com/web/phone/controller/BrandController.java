@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import com.web.phone.dto.BrandRequestDTO;
 import com.web.phone.model.Brand;
 import com.web.phone.service.BrandService;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/brand")
 public class BrandController {
@@ -25,31 +25,36 @@ public class BrandController {
     @Autowired
     private BrandService brandService;
     
+    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @GetMapping("/")
     public ResponseEntity<List<Brand>> list() {
         return brandService.brandList();
     }
-    
+
+    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @PostMapping("/")
     public ResponseEntity<Brand> create(@RequestBody Brand brand) {
         return brandService.createBrand(brand);
     }
 	
+    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @PostMapping("/get")
     public List<Brand> getBrand(@RequestBody BrandRequestDTO brand) {
         return brandService.getBrandByDeviceId(brand.getDeviceId());
     }
 
-    @DeleteMapping("/")
-	public int delete(@RequestBody BrandRequestDTO brand) {
+    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@DeleteMapping("/{id}")
+	public int deleteB(@PathVariable String id) {
 		try {
-			brandService.deleteBrand(brand.getId());
+			brandService.deleteBrand(id);
 			return 1;
 		} catch (Exception e) {
 			return 0;
 		}
 	}
 	
+    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @PutMapping("/")
 	public Brand update(@RequestBody BrandRequestDTO brand) {
 		return brandService.updateBrand(brand);

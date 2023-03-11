@@ -14,7 +14,6 @@ import com.web.phone.dto.PriceRequestDTO;
 import com.web.phone.model.Price;
 import com.web.phone.service.PriceService;
 
-@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 @RequestMapping("/api/price")
 public class PriceController {
@@ -22,19 +21,19 @@ public class PriceController {
 	@Autowired
 	private PriceService priceService;
 	
-	  @CrossOrigin(origins = "http://82.180.155.55:3000", allowedHeaders = "*")
+	  @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @PostMapping("/create")
     public ResponseEntity<Price> create(@RequestBody Price price) {
 		return priceService.create(price);
     }
 	
-    @CrossOrigin(origins = "http://82.180.155.55:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @PostMapping("/get")
     public Price getPriceById(@RequestBody PriceRequestDTO price) {
 		return priceService.getPriceByBrandId(price);
     }
 	
-    @CrossOrigin(origins = "http://82.180.155.55:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @DeleteMapping("/")
     public int delete(@RequestBody PriceRequestDTO price) {
 		try {
@@ -45,7 +44,7 @@ public class PriceController {
 		}
     }
 	
-    @CrossOrigin(origins = "http://82.180.155.55:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
     @PutMapping("/")
     public ResponseEntity<Price> update(@RequestBody PriceRequestDTO price) {
 		return priceService.updatePrice(price);

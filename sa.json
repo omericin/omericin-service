@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "phoneswap-app",
+    "private_key_id": "a028e188b034010cd2d129223b74b14d12a20548",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCa0nsYIlrydNjZ\n+IziuuI/+fR5Fq4VBCeaBFXUnpyiL9ZuRCJ8qXwG97i//Csa1ZBlHzj0KvDDzmC9\nd7bBHZ6VM+P/pbwl9XxIuua3v3hQlv18STFgGF3UlObTgUU8o2F43LGHKGDJFY1z\nSsFn+9/45UpiETDE6j+pHXTKozr/vSKc02Z9vjNPykg5ii/mY45sVo5/amBNFef6\nSYcKBnB4SNib2UPKttBLOvBocdYsiXcCw9NSxUU8TgVtkc/ERIkyR4J9J/9Wc2tS\nd0KR9mNhlL74fJn7sS9SUjJnefKVAWH8g0FPkXTo25EbFeXpXH8RIcpA2mT/DAXQ\nzUsPIEHDAgMBAAECggEAJh//zP0kzUDl56Mzul+P+HYqdCkYHDfGMsCvjCi05KGI\nGeYwYedwkdytw6UqzjRaFvS91y691FH9c5rHx71uAErjceBTuTs+7EAOMaB2Vc4g\nxNrXTFUjwgYa42mZbanEBnm+Q8y3LL1gdEwr3VnimQ2JqCWYj10p6RDGYmIY1MHR\n0ubdzIwgiPuxqNq92F4op6W+Wl4GBiZ4zH1TmfSj8EiQjx71k+KcC0ygmV36kXC4\n8fqj3Dle9coHZMdYIn5Fkhx+nXmjXSjsGrMHzjgzWD8PNZ/ZOPsIlqJCA/U4goow\nWzGzb0Mz3GVteguDKYNUh3PzQ0KI/KAtW3hCXWom3QKBgQDSK4mDm2zBZczHs2rO\nJlHzLzS8vdehYVCLJmd6v4ZFsYNycsZv+nqmvniVQLXuTB4tf1pi96vp/ueF0Cds\nJIy7ybAJxOvrZ3VYqrN60Djx8q0/3pXHPc3PiY2MWPTwnayFX+zD7UxA6DBykmCY\nHoeWs1IfePgN0KYtTbLygVbERwKBgQC8lTj3LH5FiVHDK5R2D4pwqJJbcUlDe5L/\n11jVlYT3nNBxJnzVp+zJWh1mznMa4F/0gIH1DKV+Dk/qQT/k9oEVQKX9gbfxuJAj\n53GCJbjx6/20d+EVVgXuD93+r6IVobmvyRsHR196S+qcmGF3XjZHtmumQbBikW8W\nBnnRcM5ApQKBgB8Qrl/Unmurt2whOf1ErsJKTPpE+VVyQ+x9fbgoDRnKFkrZajlt\nBaoV507wZLPXbnJ9K4gLYc7Rjbk6vkj+0gqD0lBvWgvOnArCGItjsbcZjsAtD2iG\n2x/9Df4bvADA3ZpNRnrjXW0OpPKabkqt4I7G7LGYONoZ6CY0IOo1cfTLAoGAUFQP\n69mb/+q6VTRfDNsZ0Vs83I6o8oHU3/3O7Uu/U+oML+aBDlF1X19vXrdZ+HzS4sdK\nlCNK6yMVj2cz3EfUPEVJb26t99zyKRkRFKsU2Jf5fcICsp/t7rX7jd0qYaR+AA7d\n4H/af7GOwh12hu4umOVvfWZFx/bDJtKjWT9/27ECgYABv+alVGo8CHeTrDBdo2r2\nw+eAZBZRxs1Bx/w5kin8CiNBHmuk5iovR206WehQIKmTi6SUFP8S4htCW8cBl+77\nlsF+VSpjqZqEQSn1qEuik6RWh/mXojEd3FhjRFc/PhAQuxVlh+m0FSXHIWr3cZTg\nSdRq/6om8KIA6ugk7dmbMw==\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-3kw1d@phoneswap-app.iam.gserviceaccount.com",
+    "client_id": "116541645918012889614",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-3kw1d%40phoneswap-app.iam.gserviceaccount.com"
+  }
+  

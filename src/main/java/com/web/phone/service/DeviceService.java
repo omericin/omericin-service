@@ -39,4 +39,9 @@ public class DeviceService {
 		return null;
 	}
 
+	public Optional<Device> getById(String id) {
+		Optional<Device> device = deviceRepository.findById(id);
+		return device;
+	}
+
 }

@@ -25,19 +25,19 @@ public class ColorController {
 	@Autowired
 	private ColorService colorService;
 	
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/")
     public ResponseEntity<Color> create(@RequestBody Color color) {
 		return colorService.createColor(color);
     }
 
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/")
     public ResponseEntity<List<Color>> list() {
         return colorService.getAll();
     }
 	
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@DeleteMapping("/{id}")
 	public int delete(@PathVariable String id) {
 		try {
@@ -48,7 +48,7 @@ public class ColorController {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@PutMapping("/")
 	public Color update(@RequestBody ColorRequestDTO color) {
 		return colorService.updateColor(color);

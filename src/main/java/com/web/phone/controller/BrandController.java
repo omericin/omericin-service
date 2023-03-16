@@ -25,25 +25,25 @@ public class BrandController {
     @Autowired
     private BrandService brandService;
     
-    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/")
     public ResponseEntity<List<Brand>> list() {
         return brandService.brandList();
     }
 
-    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/")
     public ResponseEntity<Brand> create(@RequestBody Brand brand) {
         return brandService.createBrand(brand);
     }
 	
-    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/get")
     public List<Brand> getBrand(@RequestBody BrandRequestDTO brand) {
         return brandService.getBrandByDeviceId(brand.getDeviceId());
     }
 
-    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
 	@DeleteMapping("/{id}")
 	public int deleteB(@PathVariable String id) {
 		try {
@@ -54,7 +54,7 @@ public class BrandController {
 		}
 	}
 	
-    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PutMapping("/")
 	public Brand update(@RequestBody BrandRequestDTO brand) {
 		return brandService.updateBrand(brand);

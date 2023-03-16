@@ -26,25 +26,25 @@ public class DeviceController {
     @Autowired
     private DeviceService deviceService;
     
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/")
     public ResponseEntity<Device> create(@RequestBody Device device) {
 		return deviceService.createDevice(device);
     }
 
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/")
     public ResponseEntity<List<Device>> list() {
         return deviceService.getAll();
     }
 
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping("/{id}")
     public Optional<Device> list(@PathVariable String id) {
         return deviceService.getById(id);
     }
 	
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@DeleteMapping("/{id}")
 	public int delete(@PathVariable String id) {
 		try {
@@ -55,7 +55,7 @@ public class DeviceController {
 		}
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	@CrossOrigin(origins = "*", allowedHeaders = "*")
 	@PutMapping("/")
 	public Device update(@RequestBody DeviceRequestDTO device) {
 		return deviceService.updateDevice(device);

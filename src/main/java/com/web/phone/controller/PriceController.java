@@ -21,19 +21,19 @@ public class PriceController {
 	@Autowired
 	private PriceService priceService;
 	
-	  @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+	  @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/create")
     public ResponseEntity<Price> create(@RequestBody Price price) {
 		return priceService.create(price);
     }
 	
-    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PostMapping("/get")
     public Price getPriceById(@RequestBody PriceRequestDTO price) {
 		return priceService.getPriceByBrandId(price);
     }
 	
-    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @DeleteMapping("/")
     public int delete(@RequestBody PriceRequestDTO price) {
 		try {
@@ -44,7 +44,7 @@ public class PriceController {
 		}
     }
 	
-    @CrossOrigin(origins = "http://localhost:3000", allowedHeaders = "*")
+    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @PutMapping("/")
     public ResponseEntity<Price> update(@RequestBody PriceRequestDTO price) {
 		return priceService.updatePrice(price);
